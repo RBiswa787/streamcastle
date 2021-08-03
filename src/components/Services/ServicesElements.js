@@ -66,6 +66,13 @@ margin-bottom:64px;
 
 @media screen and (max-width:480px){
     font-size:2rem;
+    
+}
+
+@media screen and (max-width:510px){
+    font-size:2.4rem;
+    margin-top:100px;
+    margin-bottom:50px;
 }
 `
 export const ServicesH2 =styled.h2`

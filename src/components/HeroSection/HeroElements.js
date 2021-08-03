@@ -39,14 +39,14 @@ export const HeroContent=styled.div`
 z-index:3;
 max-width: 1200px;
 position:absolute;
-padding: 130px 24px;
+padding: 200px 24px;
 display:flex;
 flex-direction:column;
 align-items:center;
 margin-left: 265px;
 
 @media screen and (max-width:768px){
-    margin-left:80px;
+    margin-left:20px;
 }
 
 @media screen and (max-width:426px){
