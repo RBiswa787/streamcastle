@@ -70,6 +70,7 @@ margin-right:-22px;
 `
 export const NavItems =styled.li`
 height: 80px;
+list-style-type: none;
 `
 
 export const NavLinks =styled(LinkS)`
