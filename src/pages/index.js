@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import SignUp from '../components/SignUp';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';

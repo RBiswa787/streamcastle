@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
+import SignUp from '../SignUp';
 import Video from '../../videos/video.mp4'
 import {Button} from '../ButtonElements';
+import '../Navbar/index.js'
 import { HeroContainer,
          HeroBg,
          VideoBg,
@@ -11,6 +13,8 @@ import { HeroContainer,
          ArrowFoward,
          ArrowRight,
  } from './HeroElements'
+
+
 const HeroSection = () => {
 const [hover,setHover]=useState(false)
 const onHover=()=>{
@@ -19,13 +23,17 @@ const onHover=()=>{
 
     return (
        <HeroContainer>
+           
           <HeroBg>
+          
           <HeroContent>
+          
               <HeroH1>Theatre Open for Streaming</HeroH1>
               <HeroP>
                   Sign up for new account and host your own shows
                   on our platform.
               </HeroP>
+              
               <HeroBtnWrapper>
                   <Button to="signup" onMouseEnter={onHover}
                   onMouseLeave={onHover}
@@ -35,9 +43,11 @@ const onHover=()=>{
                       Get Started{hover?<ArrowFoward/>:<ArrowRight/>}
                   </Button>
               </HeroBtnWrapper>
-          </HeroContent>
+         </HeroContent>
               <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
+              
           </HeroBg>
+          
        </HeroContainer>
     )
 }

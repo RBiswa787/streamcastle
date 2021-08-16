@@ -25,6 +25,7 @@ left:0;
 width: 100%;
 height:100%;
 overflow:hidden;
+z-index: 0;
 `
 export const VideoBg =styled.video`
 width:100%;

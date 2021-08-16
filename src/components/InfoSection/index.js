@@ -1,5 +1,7 @@
 import React from 'react';
 import {Button} from '../ButtonElements';
+import { useState } from 'react';
+import SignUp from '../SignUp.js';
 
 import { InfoContainer,
         InfoWrapper,
@@ -15,8 +17,8 @@ import { InfoContainer,
         Img
 
  } from './InfoElements';
-
-const InfoSection = ({lightBg,id,imgStart,topLine,lightText,
+const InfoSection = ({
+    lightBg,id,imgStart,topLine,lightText,
 headline,darkText,description,buttonLabel, img, alt, primary,
 dark,dark2}) => {
     return (
@@ -39,7 +41,7 @@ dark,dark2}) => {
                         primary={primary ? 1 : 0}
                         dark={dark? 1:0}
                         dark2={dark2 ? 1:0}
-                        
+        
                         
                         >{buttonLabel}</Button>
                     </BtnWrap>
@@ -53,8 +55,8 @@ dark,dark2}) => {
                    </Column2>
                </InfoRow>
            </InfoWrapper>
-
           </InfoContainer>  
+          
         </>
     )
 }

@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {IconContext} from 'react-icons/lib'
-import {animateScroll as scroll} from 'react-scroll'
+import {animateScroll as scroll} from 'react-scroll';
+import '../HeroSection/index.js';
+import SignUp from '../SignUp.js';
+import toggle from '../toggle.js';
 import {
     Nav,
     NavbarContainer,
@@ -16,7 +19,7 @@ import {
 
 const Navbar = ({toggle}) => {
     const [scrollNav, setScrollNav]=useState(false)
-
+    const [buttonSignup, setbuttonSignup] = useState(false);
     const changeNav=()=>{
         if(window.scrollY >=80 ){
             setScrollNav(true)
@@ -81,12 +84,22 @@ const Navbar = ({toggle}) => {
                  </NavItems>
              </NavMenu>
              <NavBtn>
-                 <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                 <NavBtnLink onClick = {() => setbuttonSignup(!buttonSignup)} >Sign In</NavBtnLink>
              </NavBtn>
             </NavbarContainer>
-        </Nav>
-
+        </Nav> 
+        <SignUp trigger = {buttonSignup}></SignUp>
+        <div style = {{
+            position: "absolute",
+            backgroundColor: "black",
+            width: "100%",
+            height: "100vh",
+            top: "9%",
+            opacity: "0",
+            zIndex: "2",
+        }} onClick = {() => setbuttonSignup(!buttonSignup)}></div>
 </IconContext.Provider>
+
         </>
     );
 };
